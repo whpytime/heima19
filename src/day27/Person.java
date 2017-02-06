@@ -31,6 +31,11 @@ public class Person {
 	}
 
 	@Override
+	public String toString() {
+		return "Person [name=" + name + ", age=" + age + "]";
+	}
+
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -56,6 +61,14 @@ public class Person {
 		} else if (!name.equals(other.name))
 			return false;
 		return true;
+	}
+
+	public void eat() {
+		System.out.println("今天吃了好东西");
+	}
+	
+	public void eat(int number) {
+		System.out.println("今天吃了" + number + "顿好东西");
 	}
 
 }
